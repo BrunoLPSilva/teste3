@@ -1,0 +1,98 @@
+header h2 {
+
+    text-align: left;
+    margin-bottom: 10%;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+
+}
+
+.section-nav {
+    background-color: #1c2c3c;
+    margin: 0;
+    height: 38px;
+    border-radius: 5px;
+    margin-bottom: 15%;
+
+
+}
+
+#div-central {
+    margin: 2% auto;
+
+    background-color: rgba(210, 220, 200, 0.4);
+
+    border: 1px solid #333;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 2px #666;
+    max-width: 800px;
+
+    padding: 20px 10px;
+}
+
+#span-data,
+#span-hora {
+    text-align: center;
+    display: block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+
+
+
+#btnEnviaTroco {
+    margin-top: 7px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 55%;
+    width: 30%;
+    height: 25px;
+    background-color: green;
+    border-radius: 5px;
+    color: antiquewhite;
+}
+
+#formTroco {
+    display: block;
+
+    margin: 10px auto;
+
+    max-width: 300px;
+}
+
+#btnAbrirCaixa {
+    width: 50%;
+    height: 50px;
+    margin-left: 25%;
+    margin-top: 10%;
+    font-size: 18px;
+    border-radius: 8px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#btnLogout {
+    float: right;
+    margin-top: -11.7%;
+    height: auto;
+    border: none;
+    width: 5%;
+    font-size: 22px;
+    border-radius: 10px;
+    background-color: #1c2c3c;
+    color: #fff;
+}
+
+#btnLogout:hover {
+    background-color: blue;
+}
+
+#span-usuario {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgba(102, 102, 102, 0.716);
+    color: #fff;
+}

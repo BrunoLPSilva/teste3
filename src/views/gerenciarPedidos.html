@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar pedidos</title>
+    <link rel="stylesheet" href="../estilos/gerenciarPedidos.css">
+    <link rel="stylesheet" href="../estilos/subTela.css">
+    <link rel="stylesheet" href="../estilos/confirmarEntrega.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/gerenciarPedidos.js"></script>
+
+</head>
+
+<body>
+    <main id="main">
+        <h1>Gerenciar pedidos</h1>
+
+        <div class="section-transacao">
+
+            <div>
+                <button id="btnEncerrarCaixa">Encerrar Caixa
+                    <img class="icon-encerrar" src="../icons/logout.svg" alt=""></img>
+                </button>
+            </div>
+
+
+
+            <!-- <button id="btnConferencia">Conferencia</button> -->
+
+        </div>
+        <div>
+            <span id="span-abertura"></span>
+            <span id="span-impressora"></span>
+        </div>
+
+
+        <section id="section-pedidos">
+            <div class="header">
+                <div class="celula">Pedido Nº</div>
+                <div class="celula">Origem</div>
+                <div class="celula">Início pedido</div>
+                <div class="celula">Duração pedido</div>
+                <div class="celula">Nome Cliente / Endereço</div>
+                <div id="tel" class="celula">Telefone</div>
+                <div class="celula">Status do pedido</div>
+                <div class="celula">Valor</div>
+                <div class="celula">Pagamento</div>
+                <div class="celula">Entregador</div>
+                <div class="celula">Observações</div>
+            </div>
+            <div id="body-pedidos"></div>
+        </section>
+        <div id="div-num-pedidos">Número de pedidos: <span id="num-pedidos">0</span></div>
+
+        <section id="section-acoes">
+            <!-- <button id="btn-alterar-pedido">Alterar pedido</button> -->
+            <button id="btn-alterar-pagamento">Alterar pagamento</button>
+            <button id="btn-status-pedido">mudar Status do pedido</button>
+            <button id="btn-imprimir-cupom">Imprimir cupom de entrega</button>
+            <button id="btn-confirma-entrega">Confirmar entregas</button>
+            <!-- <button id="btn-emitir-cupom">Emitir cupom</button> -->
+            <button id="btn-selecionar-entregador">Selecionar entregador</button>
+            <button id="btn-recibo-entregador">Recibo entregador</button>
+            <button id="btn-selecionar-impressora">Selecionar impressora</button>
+            <button id="btnMovimentacao">Movimentação</button>
+
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>

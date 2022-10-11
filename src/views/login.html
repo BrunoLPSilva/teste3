@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sistema de Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../estilos/login/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h2>SISTEMA DE LOGIN</h2>
+        <form id="form-login" method="POST">
+            <fieldset>
+                <div class="login">
+                    <div class="control">
+                        <label for="">Login: </label>
+                        <input name="usuario" id="email" type="email" class="input is-large" placeholder="Seu email"
+                            required>
+                    </div>
+                </div>
+                <div class="password">
+                    <div class="control">
+                        <label for="">Senha:</label>
+                        <input name="senha" id="senha" class="input is-large" type="password" placeholder="Sua senha"
+                            required>
+                    </div>
+                </div>
+                <div class="dois">
+                    <a class="BtnEsqueceu" href="../recuperarSenha/recuperar_senha.php">Esqueceu sua senha?</a>
+                </div>
+
+                <div class="tres"><button type="submit" class="btnEntrar">Entrar</button></div>
+
+                <div class="um">
+                    <a class="btnCadastrar" href="../cadastroCliente/index.html">Cadastrar-se?</a>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </header>
+
+
+</body>
+
+</html>

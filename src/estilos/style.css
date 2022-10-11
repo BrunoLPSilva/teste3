@@ -1,0 +1,68 @@
+* {
+    font-size: 23px;
+    font-family: 'Times New Roman';
+}
+
+div#imprimindo {
+    width: 100%;
+    height: 100vh;
+}
+
+div#imprimindo h2 {
+    margin-top: 50px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+header {
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+
+}
+
+div#div-empresa,
+div#div-ticket {
+    border-bottom: 1px dashed black;
+}
+
+p#data {
+    width: 100%;
+    float: left;
+    margin-top: -8px;
+}
+
+p#hora {
+    width: 100%;
+    float: right;
+    margin-top: -5px;
+
+}
+
+.centered {
+    text-align: center;
+    align-content: center;
+    font-weight: bold
+}
+
+.ticket {
+    width: 205px;
+    max-width: 205px;
+}
+
+p#placa {
+    font-weight: bold;
+}
+
+@media print {
+
+    .hidden-print,
+    .hidden-print *,
+    #imprimindo {
+        display: none !important;
+    }
+}
+
+body {
+
+    margin-left: 5%;
+}

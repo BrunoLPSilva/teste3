@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Nome da empresa</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/dadosCupomEntrega.js"></script>
+</head>
+
+<body>
+    <div id="imprimindo">
+        <h2>IMPRIMINDO</h2>
+    </div>
+    <div class="ticket">
+        <header>
+            <p id="cod" class="centered">Numero do pedido: 00000</p>
+        </header>
+        <div id="div-empresa">
+
+            <p id="nome">Nome: </p>
+            <p id="endereco">Endereço de entrega: </p>
+            <p id="telefone">Telefone: </p>
+            <p id="data">Data:</p>
+            <p id="hora">Hora: </p>
+            <p id="itens">Itens do pedido: </p>
+            <div id="div-itens"></div>
+            <p id="total">Valor total: </p>
+
+        </div>
+    </div>
+</body>
+
+</html>

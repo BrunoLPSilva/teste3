@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../estilos/impressaoCaixa.css">
+    <title>Nome da empresa</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/fechamentoTicket.js"></script>
+</head>
+
+<body>
+    <div id="imprimindo">
+        <h2>IMPRIMINDO</h2>
+    </div>
+    <div class="ticket">
+        <header>
+        </header>
+        <div id="div-empresa">
+
+            <h1 id="nomeEmpresa"></h1>
+
+
+            <header>
+                <p>Fechamento de Movimento - Data : <span id="data">00/02/2022</span> - Caixa : XX</p>
+                <p>Abertura : <span id="hora-abertura">10:42</span> Fechamento : <span id="hora-fechamento">21:14</span>
+                </p>
+            </header>
+
+            <main>
+                <h2>Formas de Pagamento</h2>
+                <div id="div-formas-pagamento">
+
+                </div>
+                <div id="div-formas-pagamento-total">
+                    <div class="div-forma-pagamento">
+
+                        <span class="label" class="desc">= TOTAL PAGAMENTOS</span>
+                        <span class="quantidade" class="quantidade" id="total-pagamentos-quantidade">7</span>
+                        <span class="valor" id="total-pagamentos-valor">203,10</span>
+                    </div>
+
+                    <div>
+                        <span class="desc">+ FUNDO DE CAIXA INICIAL</span>
+                        <span class="valor" id="fundo-caixa-inicial">0,00</span>
+                    </div>
+
+                    <div>
+                        <span class="desc"> = TOTAL PAGAMENTOS + ENTRADAS DE CAIXA: </span>
+                        <span class="valor" id="totalEentradas"></span>
+                    </div>
+                    <div>
+                        <span id="totalSaidas"> = TOTAL DE SAIDAS: </span> <span id="totalSaidasValor"> 0,00</span>
+                    </div>
+                    <div>
+                        <span id="total-geral"> = TOTAL GERAL DO CAIXA: </span> <span id="total-geral-valor">
+                            0,00</span>
+                    </div>
+                </div>
+        </div>
+
+        <div id="div-modelos-de-atendimento">
+            <div>
+                <span class="modelo" id="modeloAtendimento"></span>
+                <!-- EX: APP| QUANTIDADE| VALOR -->
+            </div>
+        </div>
+
+        <h2>Resumo do Movimento Geral</h2>
+        <div id="resumo-movimento-geral">
+            <div>
+                <span class="label" id="resumoDinheiro">+ DINHEIRO</span> <span class="quantidade"
+                    id="resumoDinheiroQuantidade">0</span> <span id="resumoValorDinheiro">0,00</span>
+            </div>
+            <div>
+                <span class="label" id="resumoCartao">+ CARTAO(CREDITO + DEBITO)</span> <span class="quantidade"
+                    id="resumoCartaoQuantidade">0</span>
+                <span id="resumoValorCartao">0,00</span>
+            </div>
+            <div>
+                <span class="label" id="resumoTickets">+ TICKET: </span> <span class="quantidade"
+                    id="resumoTicketQuantidade">0</span>
+                <span class="valor" id="resumoTicketValor">0,00</span>
+            </div>
+            <div>
+                <span class="label" id="resumoTotalPagamentos">= TOTAL PAGAMENTOS</span> <span class="quantidade"
+                    id="resumoTotalQuantidade">0</span>
+                <span id="resumoTotalValor">0,00</span>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Outras entradas</h2>
+    <!--         
+            + VENDAS CLIENTES 0 0,00
+            + CORTESIA 3 37,80 -->
+    <div id="outras-entradas"></div>
+    <div>
+        <span class="label" id="outrasEntradas-SubTotal">= SUB TOTAL DAS ENTRADAS</span><span class="quantidade"
+            id="outrasEntradas-SubTotal-quantidade">3</span><span class="valor" id="outrasEntradas-SubTotal-valor">
+            37,80
+        </span>
+        <div>
+            <span class="label" id="outrasEntradas-totalEntradas">=TOTAL DAS ENTRADAS: </span><span class="quantidade"
+                id="outrasEntradas-quantidade"> 10 </span id="outrasEntradas-totalEntradas-valor"><span
+                class="valor">240,90
+            </span>
+        </div>
+        <div>
+            <span id="outrasEntradas-fundoCaixa">+ FUNDO DE CAIXA INICIAL </span> <span
+                id="outrasEntradas-fundoCaixa-valor"> 0,00
+            </span>
+        </div>
+        <div>
+            <span id="outrasEntradas-totalGeralPagamentos">= TOTAL GERAL PAGAMENTOS + ENTRADAS DE CAIXA:
+            </span><span id="outrasEntradas-totalGeralPagamentos-">240,90</span>
+            </span>
+        </div>
+    </div>
+    <h2>Resumo do movimento</h2>
+    <div id="resumo-movimento">
+        <div>
+            <div>
+                <span id="resumo-movimento-vendasAvista">VENDAS A VISTA: </span><span
+                    id="resumo-movimento-vendasAvista-valor"> 203,10 (+)
+                </span>
+            </div>
+            <div>
+                <span id="resumo-movimento-taxaServico">TAXA DE SERVICOS MESA: </span>
+                <span> 0,00(+)
+                </span>
+            </div>
+            <div>
+                <span id="resumo-movimento-valorDescontos"> VALOR DE DESCONTOS: </span>
+                <span id="resumo-movimento-valorDescontos-valor"> 0,00 (-))
+                </span>
+            </div>
+            <div>
+                <span id="resumo-movimento-totalRecebimentos">TOTAL DE RECEBIMENTOS: </span>
+                <span id="resumo-movimento-totalRecebimentos-valor">203,10 (=)
+                </span>
+            </div>
+            <div>
+                <span id="resumo-movimento-quantidadeAtendimentos">ATENDIMENTOS: </span><span
+                    id="resumo-movimento-quantidadeAtendimentos-valor">9
+                </span>
+            </div>
+            <div>
+                <span id="resumo-movimento-pessoasAtendidas">Atendimentos :</span><span
+                    id="resumo-movimento-pessoasAtendidas-valor">8
+                </span>
+            </div>
+
+            <!-- <span id="resumo-movimento-comandasEmitidas">Comandas Emitidas :</span><span id="resumo-movimento-comandasEmitidas-valor" >9</span>
+                        Cupom Medio : 25,39
+                        <span id="resumo-movimento-quantidadeAtendimentos">Atendimentos :</span><span>9</span> -->
+        </div>
+        <h2>* * * Vendas por Operador * * *</h2>
+        <div id="operadores">
+            <span id="operador-do-sistema">Operador: </span>
+        </div>
+    </div>
+    <!-- * * * Vendas por Garcom/Atendente * * *
+                    Nome Itens V a l o r R$
+                    -------------------------------------------------------
+                    ALESSANDRA 21 240,90
+                    -------------------------------------------------------- -->
+    <h2>* * * Relacao de Produtos Vendidos * * *</h2>
+    <div id="produtos-vendidos">
+        <div>
+            <span class="label" id="produtos-vendidos-descricaoProduto">PRODUTO</span> <span class="quantidade"
+                id="produtos-vendidos-quantidade">QUANTIDADE</span> <span class="valor"
+                id="produtos-vendidos-valor">VALOR</span>
+        </div>
+        <!-- *** BEBIDAS ***
+                    CHA GELADO BOAZ 2 29,80
+                    SUCO DE LIMÃO 2 21,80
+                    4 51,60
+                    *** DOCES ***
+                    BANDEIJA 15 BRIG. NINHO C/ NUTELLA 1 42,90
+                    BROWNIE VITRINE 1 8,90
+                    GELADINHO GOURMET GOIABADA 1 6,00
+                    GELADINHO GOURMET NINHO C/ MORANGO 1 6,00
+                    4 63,80
+                    *** G E R A L ***
+                    ACAI NA TIGELA VITRINE 1 19,90
+                    REFRIGERANTE 2 13,00
+                    3 32,90
+                    *** SALGADOS ***
+                    COXINHA 4 32,00
+                    COXINHA C CATUPIRY 1 8,00
+                    TOSTEX LIGTH 1 18,90
+                    6 58,90 -->
+
+    </div>
+    <div>
+        <span id="produtos-vendidos-total">Total : 240,90</span>
+    </div>
+    <h2> * * * Grupos de Produtos Vendidos * * *</h2>
+    <div>
+        <span class="label" id="grupo-vendidos-descricaoProduto">PRODUTO</span> <span class="quantidade"
+            id="grupo-vendidos-quantidade">QUANTIDADE</span> <span class="valor" id="grupo-vendidos-valor">VALOR</span>
+        <div id="div-grupos">
+        </div>
+
+
+        </main>
+        <!-- --------------------------------------------------------
+            4 33,70
+            BEBIDAS 4 51,60
+            DOCES 4 63,80
+            G E R A L 3 32,90
+            SALGADOS 6 58,90
+            --------------------------------------------------------
+            Total : 240,90
+            -------------------------------------------------------- -->
+    </div>
+    </div>
+</body>
+
+</html>

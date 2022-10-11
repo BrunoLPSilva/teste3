@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+
+div.header,
+div.linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr 1fr 1fr 1fr 2fr 1fr;
+
+    border-bottom: 1px solid black;
+    padding: 10px 5px;
+    border-top: 1px solid black;
+    border-left: 2px;
+    box-sizing: border-box;
+
+
+}
+
+
+
+.linha {
+    border-right: 3px solid rgb(14, 13, 13);
+    border-left: 3px solid rgb(14, 13, 13);
+    height: auto;
+
+
+}
+
+.linha:hover {
+    background-color: rgb(50, 177, 205);
+
+}
+
+.selected {
+    background-color: blue !important;
+    color: #fff;
+}
+
+/* .selected:hover {
+    background-color: rgba(135, 138, 137, 0.306) !important;
+} */
+
+button:hover {
+    background-color: rgba(114, 11, 85, 0.791);
+}
+
+.celula {
+
+
+    text-align: center;
+    margin: auto;
+    width: auto;
+    height: auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.linha:nth-child(even) {
+    background: #64646433;
+
+
+
+
+}
+
+.section-transacao {
+    margin-left: 78%;
+}
+
+#btnEncerrarCaixa {
+    width: 60%;
+    font-size: 19px;
+    height: 52px;
+    margin-top: -11%;
+    border-radius: 4px;
+    float: right;
+    border: none;
+    background-color: rgb(179, 26, 26);
+    text-align: center;
+}
+
+.icon-encerrar {
+    width: 40px;
+    height: 30px;
+
+}
+
+#btnMovimentacao {
+    width: 125px;
+    height: 40px;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    border-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    height: auto;
+    background-color: rgb(28, 39, 138);
+
+}
+
+#btnMovimentacao:hover {
+    background-color: aqua;
+
+}
+
+#btnConferencia {
+
+    margin-left: 48%;
+    height: 22px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(188, 6, 6);
+}
+
+#botao-gravar {
+    margin-top: 20%;
+}
+
+.btnGravar {
+    width: 30%;
+    color: blue;
+}
+
+#span-abertura,
+#span-impressora {
+
+    margin-left: 1%;
+    height: 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.6px;
+    font-size: 20px;
+}
+
+#body-pedidos {
+    height: 365px;
+    overflow: scroll;
+    overflow-x: unset;
+
+}
+
+#span-impressora {
+    margin-left: 10%;
+}
+
+#btnEncerrarCaixa:hover {
+    background-color: rgb(173, 58, 58);
+
+}
+
+.linha:nth-child(even):hover {
+    background-color: rgb(50, 177, 205)
+}
+
+h1 {
+
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+#section-acoes {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
+
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    font-size: 17px;
+    background-color: rgb(124, 22, 94);
+    border-radius: 5px;
+    color: #fff;
+    border-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    height: auto;
+}
+
+.header {
+    background-color: gray;
+    border-right: 3px solid rgb(24, 23, 23);
+    border-left: 3px solid rgb(24, 23, 23);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+
+
+}
+
+.canceladoPedido {
+    background-color: rgb(12, 12, 14);
+    color: white;
+    border-radius: 8px;
+}
+
+.aguardePedido {
+    background-color: rgb(141, 3, 3);
+    color: rgba(255, 255, 255, 0.911);
+    margin: auto;
+    width: auto;
+    height: auto;
+
+}
+
+.inicioPedido {
+    background-color: grey;
+    color: white;
+    margin: auto;
+    width: auto;
+    height: auto;
+
+}
+
+.entreguePedido {
+    background-color: rgb(6, 109, 6);
+    color: white;
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.entregaDoPedido {
+    background-color: rgb(244, 244, 8);
+    color: black;
+    margin: auto;
+    width: auto;
+    height: auto;
+
+
+}
+
+.celula-estado {
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Zilla Slab', serif;
+    margin: auto;
+    width: auto;
+    height: auto;
+
+
+}
+
+main #sub-tela {
+    background-color: #52c4e6d4;
+    margin: auto;
+    height: 90%;
+    border-radius: 13px;
+    width: 60%;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+main #sub-tela h1 {
+
+    background-color: #fff;
+    color: black;
+
+}
+
+.sairClick2 {
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 15%;
+    height: 25px;
+    font-size: 22px;
+    background-color: rgba(255, 0, 0, 0.892);
+    margin-top: 5px;
+}
+
+.sairClick2:hover {
+    background-color: red;
+}
+
+#detalhes-item-pedido {
+    margin-left: 50%;
+}
+
+h1 {
+    background-color: gray;
+    border-radius: 100px;
+    opacity: 0.9;
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.2rem;
+
+}
+
+section#alerta div {
+    width: 90%;
+    margin: 2% auto;
+
+}
+
+.produto-nome {
+
+    margin-left: -40px;
+    display: block;
+    text-align: left;
+    color: white;
+    width: 40%;
+    float: left;
+}
+
+.produto-quantidade {
+
+    display: block;
+    text-align: center;
+    border-bottom: 2px white;
+    margin-left: 5%;
+    width: 20%;
+    float: left;
+}
+
+.produto-valor {
+
+    display: block;
+    text-align: right;
+    margin-left: 50%;
+
+}
+
+
+/* .produto-quantidade,
+.produto-nome {
+    margin-top: 10px;
+} */
+
+
+span.span-grid {
+    /* font-size: 15px;
+    display: block;
+    text-align: center;
+    height: auto;
+    margin-top: 7px; */
+    display: grid;
+    margin: auto;
+    margin-top: auto;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+/* NAVBAR */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    border-radius: 5px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: rgb(105, 67, 67);
+}
+
+#div-num-pedidos {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.notificacao-mensagem {
+    margin-bottom: 15%;
+    background-color: #fff;
+    width: 100%;
+    height: 40%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+.notificacao-botao {
+    font-size: 28px;
+    width: auto;
+    height: auto;
+    margin-left: 5%;
+    margin-top: -15%;
+}
+
+.notificacao-titulo {
+
+    background-color: #fff;
+    color: rgb(206, 21, 21);
+    width: 100%;
+    margin-left: 35%;
+    margin-top: 10%;
+    height: 40%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#btn-confirmar {
+    margin-left: 27%;
+
+}
+
+.h1Estado,
+.h1ConfirmarEntrega,
+.h1SelecionarEntregador {
+
+    width: 50%;
+    margin-left: 20%;
+    border-radius: 5px;
+}
+
+section#alerta div.alerta-bloco {
+    width: 90%;
+    background-color: #fffd;
+    min-height: 300px;
+    padding: 20px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 2px #333;
+    border: 2px solid #ddc;
+    overflow: scroll;
+    max-height: 80%;
+}
+
+div.input-form,
+div.div-btns {
+    width: 30%;
+    margin: auto;
+
+    font-size: 1.4em;
+    font-family: 'Roboto';
+}
+
+div.input-form select {
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+
+div.div-btns button {
+    font-size: 1.1em;
+}
+
+/* .produto-nome {
+    display: block;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    padding: 1px 5px;
+} */

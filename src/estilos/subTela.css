@@ -1,0 +1,66 @@
+/* NOTIFICAR */
+
+section#alerta {
+    background-color: rgba(30, 30, 30, 0.7);
+    position: fixed;
+    top: 0px;
+    z-index: 15;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section#alerta div,
+section#alerta iframe {
+    display: block;
+    background-color: var(--cultured-2);
+    border: 2px solid var(--cultured-3);
+
+
+    /* margin: 10% auto; */
+}
+
+section#alerta iframe {
+    width: 60%;
+    height: 40%;
+}
+
+section#alerta iframe.medium {
+    width: 80%;
+    height: 50%;
+}
+
+section#alerta iframe,
+div.notificacao-bloco {
+
+    min-height: 100px;
+
+    border: 2px solid var(--cultured-3);
+
+    box-shadow: 3.5px 6px 6px var(--eerie-black);
+}
+
+section#alerta iframe.slim {
+    width: 40%;
+    height: 30%;
+    background-color: var(--spanish-gray-2);
+}
+
+section#alerta div {
+    padding: 0;
+    width: 50%;
+}
+
+
+
+@media screen and (max-width: 850px) {
+    section#alerta div {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#alerta div {
+        width: 85%;
+    }
+}

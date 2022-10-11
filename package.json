@@ -1,0 +1,26 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "description": "Hello World!",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "author": "Jane Doe",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^20.0.1",
+    "electron-builder": "^23.6.0",
+    "electron-wix-msi": "^4.0.0"
+  },
+  "dependencies": {
+    "electron-pos-printer": "^1.2.4",
+    "electron-updater": "^5.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrunoLPSilva/soli-restaurante-desktop.git"
+  }
+}

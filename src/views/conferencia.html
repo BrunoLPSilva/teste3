@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/conferencia.css">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/conferenciaCaixa.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <a href="./gerenciarPedidos.html"><button class="btnVoltar">Voltar</button></a>
+        <div id="dataFechamento">DATA: </div>
+    </header>
+
+
+    <div id="formas-pagamento">
+        <h1>Conferência</h1>
+    </div>
+
+    <div id="formas-pagamento-caixa">
+        <div>
+            <h1 id="h1-caixa">Caixa</h1>
+            <h1 class="diferenca">Diferença do Caixa</h1>
+        </div>
+
+    </div>
+
+    <div id="diferenca-caixa">
+        <!-- <h2>Diferença</h2> -->
+    </div>
+
+
+
+
+    <div id="entrada-saida-conferencia">
+        <div class="inputbox">
+            <label for="in-entrada">ENTRADA</label>
+            <input type="text" id="in-entrada" />
+        </div>
+        <div class="inputbox">
+            <label for="in-saida">SAÍDA</label>
+            <input type="text" id="in-saida" />
+        </div>
+
+        <div class="inputbox">
+            <label for="in-troco">TROCO</label>
+            <input type="text" id="in-troco" />
+        </div>
+
+        <div class="inputbox">
+            <span id="span-total">TOTAL - <span id="valor-total">R$ 0,00</span></span>
+        </div>
+    </div>
+
+    <div id="entrada-saida-caixa">
+        <div class="inputbox">
+
+            <span id="span-entrada">ENTRADA </span>
+            <input type="text" class="inputCaixa" id="caixaEntrada" />
+
+            <input class="inputDiferenca" type="text" id="diferencaEntrada" name="diferencaEntrada">
+        </div>
+
+        <div class="inputbox">
+
+            <span id="span-saida">SAÍDA </span>
+            <input type="text" class="inputCaixa" id="caixaSaida" />
+            <input class="inputDiferenca" type="text" id="diferencaSaida" name="diferencaSaida">
+        </div>
+
+        <div class="inputbox">
+
+            <span id="span-troco">TROCO </span>
+            <input type="text" class="inputCaixa" id="caixaTroco" />
+            <input class="inputDiferenca" type="text" id="diferencaTroco" name="diferencaTroco">
+        </div>
+    </div>
+    <div id="botao-gravar">
+        <button id="btnGravarConferencia">Gravar</button>
+    </div>
+
+    <footer>
+        <button class="encerrar-sessao" id="btnEncerrar">Encerrar Sessão</button>
+        <button id="btnImprimir">Imprimir</button>
+    </footer>
+
+</body>
+
+</html>

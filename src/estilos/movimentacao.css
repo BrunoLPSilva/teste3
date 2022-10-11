@@ -1,0 +1,103 @@
+body {
+    background-color: #ececec;
+}
+
+h1 {
+    text-align: center;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+fieldset {
+    width: 50%;
+    margin-bottom: 15px;
+    margin-left: 28%;
+    text-align: center;
+}
+
+
+.input-form {
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+#btn-submit {
+    margin-left: 15%;
+    margin-bottom: 5%;
+}
+
+#valorlbl {
+    margin-left: 3.5%;
+}
+
+.movimentacaoCod,
+.movimentacaoDescricao,
+.movimentacaoData,
+.movimentacaoValor,
+.movimentacaoObservacao {
+    background-color: white;
+    opacity: 0.7;
+}
+
+th {
+    background-color: rgba(0, 0, 255, 0.782);
+    color: #fff;
+
+}
+
+th,
+td,
+p {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    padding: 10px 5px;
+    text-align: center;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+}
+
+td,
+p {
+    border-top: 0.5px solid black;
+
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10%;
+}
+
+#btn-submit {
+
+    width: 15%;
+    height: 23px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 40px;
+
+
+}
+
+#btn-return {
+    width: 7%;
+    height: 23px;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+#btn-submit:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+.div-table {
+    overflow: scroll;
+    max-height: 300px;
+    overflow-x: hidden;
+}

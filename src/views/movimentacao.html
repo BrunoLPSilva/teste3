@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/movimentacao.css">
+    <title>Criar movimentação</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../scripts/movimentacao.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="./gerenciarPedidos.html"><button id="btn-return">Voltar</button></a>
+
+        <main>
+            <h1>Criar movimentação</h1>
+            <fieldset>
+                <form action="#" id="form-movimentacao">
+                    <div class="input-form">
+                        <label for="categoria-movimentacao">Categoria da movimentação</label>
+                        <select id="categoria-movimentacao"></select>
+                    </div>
+
+                    <div class="input-form">
+                        <label id="valorlbl" for="valor">Valor</label>
+                        <input type="text" id="valor" />
+                    </div>
+
+                    <div class="input-form">
+                        <label for="observacao">Observação</label>
+                        <textarea id="observacao" cols="30" rows="3"></textarea>
+                    </div>
+
+                    <button id="btn-submit">Gravar</button>
+                </form>
+            </fieldset>
+            <hr>
+            <div>
+                <h1>Histórico de movimentação</h1>
+                <div class="div-table">
+                    <table id="tbl-movimentacao">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Data</th>
+                                <th>Observação</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="body-movimentacao"></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </header>
+</body>
+
+</html>
