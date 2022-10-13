@@ -222,12 +222,13 @@ ipcMain.handle('imprimir-fechamento-caixa', async (event, args) => {
 });
 
 autoUpdater.on('update-available', () => {
-  //mainWindow.webContents.send('update_available');
+  mainWindow.webContents.send('update_available');
   console.log('atualizando');
 });
 
 autoUpdater.on('update-downloaded', () => {
-  //mainWindow.webContents.send('update_downloaded');
-
+  mainWindow.webContents.send('update_downloaded');
+});
+ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
