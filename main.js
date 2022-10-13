@@ -26,7 +26,7 @@ const createWindow = async () => {
   mainWindow.loadFile('src/views/login.html')
 
 
-  mainWindow.once('ready-to-show', () => {
+  mainWindow.once('ready-to-show', async () => {
 
     autoUpdater.checkForUpdatesAndNotify();
   });
