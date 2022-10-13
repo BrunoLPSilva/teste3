@@ -1,14 +1,14 @@
 {
-  "name": "my-electron-app",
-  "version": "1.0.1",
-  "description": "Hello World!",
+  "name": "restaurante",
+  "version": "1.0.2",
+  "description": "Sistema para gestão de seu restaurante!",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "build": "electron-builder build --win --publish never",
     "deploy": "electron-builder build --win --publish always"
   },
-  "author": "Jane Doe",
+  "author": "Soli informática",
   "license": "MIT",
   "devDependencies": {
     "electron": "^20.0.1",
@@ -21,6 +21,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/BrunoLPSilva/soli-restaurante-desktop.git"
+    "url": "https://github.com/BrunoLPSilva/teste3"
+  },
+  "build": {
+    "appId": "com.soli.restaurantes",
+    "productName": "Soli Restaurantes",
+    "copyright": "Copyright © Soli Infomática"
   }
 }

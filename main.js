@@ -27,12 +27,7 @@ const createWindow = async () => {
 
 
   mainWindow.once('ready-to-show', () => {
-    autoUpdater.setFeedURL({
-      provider: 'github',
-      owner: 'BrunoLPSilva',
-      repo: 'soli-restaurante-desktop',
-      token: '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',
-    });
+
     autoUpdater.checkForUpdatesAndNotify();
   });
 
