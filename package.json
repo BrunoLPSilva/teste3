@@ -1,6 +1,6 @@
 {
   "name": "restaurante",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Sistema para gestão de seu restaurante!",
   "main": "main.js",
   "scripts": {
