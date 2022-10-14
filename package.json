@@ -2,6 +2,7 @@
   "name": "restaurante",
   "version": "1.0.6",
   "description": "Sistema para gestão de seu restaurante!",
+  "repository": "https://github.com/BrunoLPSilva/teste3",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -16,16 +17,31 @@
     "electron-wix-msi": "^4.0.0"
   },
   "dependencies": {
+    "@electron-forge/publisher-github": "^6.0.0-beta.67",
     "electron-pos-printer": "^1.2.4",
-    "electron-updater": "^5.3.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BrunoLPSilva/teste3"
+    "electron-updater": "^5.3.0",
+    "update-electron-app": "^2.0.1"
   },
   "build": {
     "appId": "com.soli.restaurantes",
     "productName": "Soli Restaurantes",
     "copyright": "Copyright © Soli Infomática"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "PhiloNL",
+              "name": "Restaurante",
+              "token": "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"
+            }
+          }
+        }
+      ]
+    }
   }
 }

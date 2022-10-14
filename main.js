@@ -1,9 +1,7 @@
 // main.js
 
 // Modules to control application life and create native browser window
-const { app, BrowserWindow, ipcMain } = require('electron')
-
-const { autoUpdater } = require('electron-updater');
+const { app, BrowserWindow, ipcMain, autoUpdater } = require('electron')
 
 const path = require('path')
 
@@ -221,14 +219,31 @@ ipcMain.handle('imprimir-fechamento-caixa', async (event, args) => {
 
 });
 
-autoUpdater.on('update-available', () => {
-  mainWindow.webContents.send('update_available');
-  console.log('atualizando');
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+  //
+})
+
+autoUpdater.on('update-downloaded', (event, releaseNotes, releaseName) => {
+  autoUpdater.quitAndInstall()
+})
+
+autoUpdater.setFeedURL('https://github.com/BrunoLPSilva/teste3/')
+autoUpdater.checkForUpdates()
+
+setInterval(() => {
+  autoUpdater.checkForUpdates()
+}, 30000)
+
+app.on('ready', () => {
+  updateApp = require('update-electron-app');
+
+  updateApp({
+    // repo: 'PhiloNL/electron-hello-world', // defaults to package.json
+    updateInterval: '1 hour',
+    notifyUser: true
+  });
 });
 
-autoUpdater.on('update-downloaded', () => {
-  mainWindow.webContents.send('update_downloaded');
-});
-ipcMain.on('restart_app', () => {
-  autoUpdater.quitAndInstall();
-});
+require('update-electron-app')({
+  logger: require('electron-log')
+})
