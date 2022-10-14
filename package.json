@@ -1,6 +1,6 @@
 {
   "name": "restaurante",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Sistema para gestão de seu restaurante!",
   "repository": "https://github.com/BrunoLPSilva/teste3",
   "main": "main.js",
